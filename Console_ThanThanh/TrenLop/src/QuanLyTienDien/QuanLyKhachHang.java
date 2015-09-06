@@ -53,7 +53,7 @@ public class QuanLyKhachHang
 	 */
 	public void xuatTTKH(int soft) 
 	{
-		if(soft ==0 ) // Không xắp xếp
+		if(soft ==0 ) // Không Sắp xếp
 			prinfKH();
 		if(soft == 1) // Sắp xếp theo số điện của khách tăng dần
 		{
