@@ -1,0 +1,11 @@
+package QuanLyTienDien;
+
+import java.util.Comparator;
+
+public class QuanLyKhachHangSoft implements Comparator<QuanLyKhachHang> 
+{
+	@Override
+	public int compare(QuanLyKhachHang o1, QuanLyKhachHang o2) {
+		return 0;
+	}
+}

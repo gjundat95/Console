@@ -1,0 +1,61 @@
+package QuanLyTienDien;
+
+import java.sql.Time;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Scanner;
+import java.util.Timer;
+
+public class QuanLyKhachHang 
+{
+	ArrayList<BienLai> listKhachHang = new ArrayList<BienLai>();
+	Scanner input = new Scanner(System.in);
+	int n = 0;
+	
+	/*
+	 * Nhập thông tin của n khách hàng
+	 */
+	public void nhapTTKH()
+	{
+		String tenKhach,maKhach,diaChi;
+		float soDienThangTruoc, soDienThangNay;
+		
+		System.out.println("Nhập vào tổng số khách hàng: ");
+		n = Integer.parseInt(input.nextLine());
+		
+		for(int i = 0; i < n; i++)
+		{
+			System.out.println("------------------------------------------------------------------------");
+			System.out.println("Nhập vào mã khách hàng: ");
+			maKhach = input.nextLine();
+			System.out.println("Nhập vào tên khách hàng: ");
+			tenKhach = input.nextLine();
+			System.out.println("Nhập vào địa chỉ khách hàng: ");
+			diaChi = input.nextLine();
+			System.out.println("Nhập vào số điện tháng trước trên đồng hồ(kWh): ");
+			soDienThangTruoc = Integer.parseInt(input.nextLine());
+			do{
+			System.out.println("Nhập vào số điện tháng này trên đồng hồ(kWh): ");
+			soDienThangNay = Integer.parseInt(input.nextLine());
+			}while(soDienThangNay <= soDienThangTruoc);
+			BienLai bl = new BienLai(maKhach, tenKhach, diaChi, soDienThangTruoc, soDienThangNay);
+			listKhachHang.add(bl);
+		}
+	}
+
+	/*
+	 * Xuất thông tin của từng khách và và số tiền phải trả
+	 */
+	public void xuatTTKH()
+	{
+		Date dt = new Date();
+		System.out.println("-------------------------------------------------------------------------------------------------");
+		System.out.println("Biên Lai Thanh toán tiền điện cho "+n+"khách hàng vào ngày "+dt.toString());
+		for(BienLai bl: listKhachHang)
+		{	
+			System.out.println("-------------------------------------------------------------------------------------------------");
+			BienLai.XuatBienLai(bl);
+		}
+	}
+	
+}

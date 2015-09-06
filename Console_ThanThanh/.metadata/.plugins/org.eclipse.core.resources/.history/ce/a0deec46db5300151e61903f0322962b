@@ -1,0 +1,18 @@
+package QuanLyTienDien;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+public class Main 
+{
+	private ArrayList<BienLai> listBienLai = new ArrayList<BienLai>();
+
+	public static void main(String[] args) 
+	{
+		BienLai bl = new  BienLai();
+		bl.NhapThongTin();
+		bl.xuatThongTin();
+		
+	}
+
+}

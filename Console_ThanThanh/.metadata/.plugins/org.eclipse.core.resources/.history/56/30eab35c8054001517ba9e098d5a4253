@@ -1,0 +1,11 @@
+package QuanLyTienDien;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		QuanLyKhachHang qlKH = new QuanLyKhachHang();
+		qlKH.nhapTTKH();
+	}
+
+}

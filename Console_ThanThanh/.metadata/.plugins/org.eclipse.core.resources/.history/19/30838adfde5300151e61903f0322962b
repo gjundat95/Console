@@ -1,0 +1,52 @@
+package QuanLyTienDien;
+
+import java.util.Scanner;
+public class BienLai extends KhachHang
+{
+	public float soDienCu;
+	public float soDienMoi;
+	public static final float heSoDien = 3500;
+	public float soTien;
+	Scanner input = new Scanner(System.in);
+	
+	/*
+	 * Nhập vào thông tin khách hàng và số tiền điện
+	 */
+	public void NhapThongTin()
+	{
+		//Nhập thông tin khách hàng
+		System.out.println("Nhap vao ma khach hang:");
+		maKhach = input.nextLine();
+		System.out.println("Nhap vao ten khach hang:");
+		tenKhach = input.nextLine();
+		System.out.println("Nhap vao dia chi cua khach hang:");
+		diaChi = input.nextLine();
+		
+		// Nhập thông tin biên lai
+		System.out.println("Nhap so dien tren dong ho:(KW.h)");
+		soDienCu = Integer.parseInt(input.nextLine());
+		
+		//Số điện trên công tơ mét thắng sau phải >= tháng trước
+		do
+		{
+		System.out.println("Nhap so dien tren dong ho:(KW.h)");
+		soDienMoi = Integer.parseInt(input.nextLine());
+		}while(soDienCu >= soDienMoi);
+		
+		soTien = (soDienMoi - soDienCu) * heSoDien;
+	}
+	
+	/*
+	 * Xuất ra thông tin khách hàng và biên lai
+	 */
+	public static void xuatThongTin(BienLai bl)
+	{
+		System.out.println("---------------------------------------------------------------------------");
+		System.out.println("Khach Hang:"+bl.tenKhach);
+		System.out.println("Dia Chi Khach: "+bl.diaChi);
+		System.out.println("So dien dien thang nay: "+(bl.soDienMoi-bl.soDienCu) +" KW.h");
+		System.out.println("So tien dien ma "+"\"" +bl.tenKhach +"\""+ " phai tra la: "+bl.soTien+" VND");
+		System.out.println("---------------------------------------------------------------------------");
+	}
+	
+}

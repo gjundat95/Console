@@ -1,0 +1,23 @@
+package QuanLyTienDien;
+
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main 
+{
+	private ArrayList<BienLai> listBienLai = new ArrayList<BienLai>();
+	static int n = 0;
+	static Scanner input = new Scanner(System.in);
+	
+	public static void main(String[] args) 
+	{
+		System.out.println("Nhập vào tổng số hộ dân:");
+		n = input.next
+		BienLai bl = new  BienLai();
+		bl.NhapThongTin();
+		bl.xuatThongTin();
+		
+	}
+
+}

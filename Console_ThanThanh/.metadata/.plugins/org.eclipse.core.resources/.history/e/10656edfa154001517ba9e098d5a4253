@@ -1,0 +1,13 @@
+package QuanLyTienDien;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int choose = 0;
+		QuanLyKhachHang qlKH = new QuanLyKhachHang();
+		qlKH.nhapTTKH();
+		qlKH.xuatTTKH(0);
+		switch()
+	}
+
+}

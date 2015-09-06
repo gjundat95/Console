@@ -1,0 +1,34 @@
+package QuanLyTienDien;
+
+import java.util.Scanner;
+public class BienLai extends KhachHang
+{
+	public float soDienCu;
+	public float soDienMoi;
+	public static final float heSoDien = 3500;
+	public float soTien;
+	Scanner input = new Scanner(System.in);
+	
+	/*
+	 * Nhập vào thông tin khách hàng và số tiền điện
+	 */
+	public void NhapThongTin()
+	{
+		//Nhập thông tin khách hàng
+		System.out.println("Nhap vao ma khach hang:");
+		maKhach = input.nextLine();
+		System.out.println("Nhap vao ten khach hang:");
+		tenKhach = input.nextLine();
+		System.out.println("Nhap vao dia chi cua khach hang:");
+		diaChi = input.nextLine();
+		
+		// Nhập thông tin biên lai
+		System.out.println("Nhap so dien tren dong ho:(KW.h)");
+		soDienCu = Integer.parseInt(input.nextLine());
+		System.out.println("Nhap so dien tren dong ho:(KW.h)");
+		soDienMoi = Integer.parseInt(input.nextLine());
+		
+		soTien = (soDienMoi - soDienCu) * heSoDien;
+	}
+	
+}
