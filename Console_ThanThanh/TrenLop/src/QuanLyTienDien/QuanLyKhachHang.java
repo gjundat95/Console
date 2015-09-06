@@ -49,20 +49,20 @@ public class QuanLyKhachHang
 
 	/*
 	 * Xuất thông tin của từng khách và và số tiền phải trả
-	 * Đồng thời xắp xếp khách theo tiêu chí nhất định
+	 * Đồng thời Sắp xếp khách theo tiêu chí nhất định
 	 */
 	public void xuatTTKH(int soft) 
 	{
 		if(soft ==0 ) // Không xắp xếp
 			prinfKH();
-		if(soft == 1) // Xắp xếp theo số điện của khách tăng dần
+		if(soft == 1) // Sắp xếp theo số điện của khách tăng dần
 		{
 			Collections.sort(listKhachHang,new QuanLyKhachHangSoft());
 			prinfKH();
 		}
 		if(soft == 2) // So sánh tên của khách hàng và sắp xếp theo A-Z
 		{
-			// Xắp xếp lại
+			// Sắp xếp lại
 			Collections.sort(listKhachHang,new Comparator<BienLai>() {
 				@Override
 				public int compare(BienLai o1, BienLai o2) 
@@ -76,7 +76,7 @@ public class QuanLyKhachHang
 		}
 		if(soft == 3) // So sánh theo tên nếu tên trùng nhau so sánh theo số tien điện tháng này
 		{
-			// Xắp xếp
+			// Sắp xếp
 			Collections.sort(listKhachHang,new Comparator<BienLai>() {
 
 				@Override
