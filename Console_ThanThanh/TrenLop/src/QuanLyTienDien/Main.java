@@ -19,9 +19,9 @@ public class Main {
 			System.out.println("----------------------------Chương trình tính tiền điện------------------------------");
 			System.out.println("----------Xin mời chọn chức năng để xắp xếp khách hàng theo mục đích của bạn----------");
 			System.out.println("Chọn 0: Giữ nguyên danh sách khách hàng. ");
-			System.out.println("Chọn 1: Xắp xếp danh sách khách hàng theo số tiền phải trả. ");
-			System.out.println("Chọn 2: Xắp xếp danh sách khách hàng theo tên khách. ");
-			System.out.println("Chọn 3: Xắp xếp danh sách khách hàng theo tên A-Z nếu tên trùng thí xắp xếp theo số tiền.");
+			System.out.println("Chọn 1: Sắp xếp danh sách khách hàng theo số tiền phải trả. ");
+			System.out.println("Chọn 2: sắp xếp danh sách khách hàng theo tên khách. ");
+			System.out.println("Chọn 3: Sắp xếp danh sách khách hàng theo tên A-Z nếu tên trùng thí xắp xếp theo số tiền.");
 			System.out.println("Chọn 4: Exit. ");
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			choose = input.nextInt();
