@@ -7,6 +7,7 @@ public abstract class Animal
 	private String kind;
 	private String name;
 	
+	// Van co the khoi tao duoc neu biet dung
 	public Animal(double weight, double height, String kind, String name) {
 		super();
 		this.weight = weight;
@@ -14,7 +15,7 @@ public abstract class Animal
 		this.kind = kind;
 		this.name = name;
 	}
-	
+	// Dung ham khoi tao mot doi tuong ma khong muon truyen bien vao cho doi tuong do
 	public Animal()
 	{
 	}
@@ -44,6 +45,7 @@ public abstract class Animal
 		this.name = name;
 	}
 
+	// Phuong thuc hien thi
 	public void printAnimal() 
 	{
 		
