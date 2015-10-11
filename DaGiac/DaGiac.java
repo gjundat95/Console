@@ -34,6 +34,7 @@ public class DaGiac
 	public void hienThiChuVi()
 	{
 		int temp = 0;
+		// chay theo kieu foreach trong c#
 		for(int chieuDaiCanh : dodaiCanh)
 		{
 			temp += chieuDaiCanh;
