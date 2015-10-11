@@ -1,5 +1,5 @@
 package ToanHoc;
-
+// Lai Bao la Khong Phai ham Main DI
 public class Main {
 
 	public static void main(String[] args)
