@@ -11,6 +11,7 @@ public class Main {
 		tamGiac.nhapCanhDG();
 		tamGiac.hienThiChuVi();
 		tamGiac.hienThiDienTich();
+		// Ngo doan tinh
 	}
 
 }
