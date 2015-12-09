@@ -8,7 +8,7 @@ public class Main
 		QuanLySinhVien quanLySinhVien = new QuanLySinhVien();
 		quanLySinhVien.NhapSinhVien();
 		quanLySinhVien.XuatSinhVien();
-		quanLySinhVien.XapXepTheoTen();
+		quanLySinhVien.TimHo();
 		
 
 	}

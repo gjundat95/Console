@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class QuanLySinhVien 
 {
@@ -30,6 +32,48 @@ public class QuanLySinhVien
 		{
 			sv.Xuat();
 		}
+	}
+	
+	/*
+	 * Tìm kiếm theo tên bằng regex
+	 */
+	public void TimTen()
+	{
+		System.out.print("Moi Nhap Ten Can Tim Kiem: ");
+		String text = input.nextLine();
+		text = text.trim();
+		String regex = text+"$";
+		Pattern pattern = Pattern.compile(regex);
+		for (int i = 0; i < n; i++)
+		{
+			Matcher matcher = pattern.matcher(dsSinhVien.get(i).hoten);
+			if(matcher.find())
+			{
+				dsSinhVien.get(i).Xuat();
+			}
+		}
+		System.out.println("Tim Xong.");
+	}
+	
+	/*
+	 * Tìm họ bằng Regex
+	 */
+	public void TimHo()
+	{
+		System.out.print("Xin moi nhap ho can tim kiem: ");
+		String text = input.nextLine();
+		text = text.trim();
+		String regex = "^"+text;
+		Pattern pattern = Pattern.compile(regex);
+		for(SinhVien sv : dsSinhVien)
+		{
+			Matcher matcher = pattern.matcher(sv.hoten);
+			if(matcher.find())
+			{
+				sv.Xuat();
+			}
+		}
+		System.out.println("Tim kiem xong.");
 	}
 	
 	public void XapXepTheoTuoi()
@@ -68,7 +112,7 @@ public class QuanLySinhVien
 	/*
 	 * Xắp xếp điểm theo lambda 
 	 */
-	public void XapXepTheoDiem2()
+	public void XapXepTheoTuoi1()
 	{
 		dsSinhVien.sort((o1,o2)->o1.tuoi-o2.tuoi);
 		dsSinhVien.forEach((sv)->sv.Xuat());
