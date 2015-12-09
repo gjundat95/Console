@@ -114,7 +114,7 @@ public class QuanLySinhVien
 	 */
 	public void XapXepTheoTuoi1()
 	{
-		dsSinhVien.sort((o1,o2)->(int)(o1.tongdiem-o2.tongdiem));
+		dsSinhVien.sort((o1,o2)->o1.tuoi-o2.tuoi);
 		dsSinhVien.forEach((sv)->sv.Xuat());
 	}
 	/*
